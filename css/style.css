@@ -1,0 +1,904 @@
+/*//////////////////////////////////////////////////////////////////
+[ Font ]*/
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE CSS ]*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: "Lato", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ Generall style ]*/
+::-moz-selection {
+    background: #ea5455;
+    color: #2d4059;
+}
+
+::selection {
+    background: #ea5455;
+    color: #2d4059;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #e5e5e5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ea5455;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color:rgba(231, 60, 60, 0.61);
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ opening page]*/
+div.openingpage {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0%;
+    left: 0%;
+    background-color: #decdc3;
+    z-index: 4;
+}
+
+@keyframes fadeOutRight {
+    from {
+        z-index: 2;
+        width: 100%;
+    }
+
+    to {
+        z-index: 2;
+        width: 0%;
+    }
+}
+
+.fadeOutRight {
+    animation-name: fadeOutRight;
+    animation-duration: 1s;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ section Home]*/
+
+section.home {
+    width: 100%;
+    height: 100vh;
+    background-color: #2d4059;
+    z-index: 1;
+}
+
+section.home header {
+    display: flex;
+    height: 80px;
+}
+
+section.home header img {
+    margin-left: 5%;
+    margin-top: 15px;
+    background-size: 100% 100%;
+    height: inherit;
+    clip-path: circle(40%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+}
+
+section.home header img.showImg {
+    z-index: 5;
+    opacity: 1;
+}
+
+section.home ul {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 80%;
+    height: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+}
+
+section.home ul.opacityEffect {
+    opacity: 1;
+}
+
+section.home ul li:first-child {
+    margin-left: 12%;
+}
+
+section.home ul li {
+    list-style: none;
+    padding-right: 4%;
+}
+
+section.home ul li a {
+    display: inline-block;
+    padding: 8px 10px 12px 16px;
+    text-decoration: none;
+    color: #e5e5e5;
+    font-size: 1.2rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+section.home ul li a.active,
+section.home ul li a:hover {
+    background-image: url("../images/Pinselstrich.png");
+}
+
+/*------------------------------------------------------------------
+[ section home pre & main ]*/
+
+section.home pre {
+    font-size: 12rem;
+    color: #e5e5e5;
+    position: absolute;
+    left: 26%;
+    top: 25%;
+    font-family: "Righteous", cursive;
+    transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        color: #2d4059;
+        transform: translate3d(0, 10%, 0);
+        -webkit-transform: translate3d(0, 10%, 0);
+        -moz-transform: translate3d(0, 10%, 0);
+        -ms-transform: translate3d(0, 10%, 0);
+        -o-transform: translate3d(0, 10%, 0);
+    }
+
+    to {
+        opacity: 1;
+        z-index: 5;
+        color: #2d4059;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+}
+
+div.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    overflow: hidden;
+    position: relative;
+}
+
+div.main span {
+    position: absolute;
+    font-size: 4rem;
+}
+
+div.main span:first-child {
+    top: 3%;
+    left: 56%;
+    color: #80b199;
+}
+
+div.main span:nth-child(2) {
+    top: 10%;
+    left: 38%;
+    color: #ffb400;
+}
+
+div.main span:nth-child(3) {
+    top: 70%;
+    left: 17%;
+    color: #fffaea;
+}
+
+div.main span:nth-child(4) {
+    top: 35%;
+    left: 15%;
+    color: #ea5455;
+}
+
+div.main span:nth-child(5) {
+    top: 48%;
+    left: 79%;
+    color: #bc8080;
+}
+
+div.main span:nth-child(6) {
+    top: 52%;
+    left: 20%;
+    color: #e07a5f;
+}
+
+div.main span:nth-child(7) {
+    top: 15%;
+    left: 87%;
+    color: #ffd460;
+}
+
+div.main span:nth-child(8) {
+    top: 69%;
+    left: 20%;
+    color: #878e88;
+}
+
+div.main span:nth-child(9) {
+    top: 16%;
+    left: 19%;
+    color: #8c1c13;
+}
+
+div.main span:nth-child(10) {
+    top: 7%;
+    left: 70%;
+    color: #5f3b69;
+}
+
+div.main span:nth-child(11) {
+    top: 75%;
+    left: 68%;
+    color: #238781;
+}
+
+div.main span:last-child {
+    top: 50%;
+    left: 88%;
+    color: #8ba33a;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ section MySkills]*/
+section.mySkills {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+    background-color: #e5e5e5;
+}
+
+div.skillsTitle {
+    width: 20%;
+    padding-left: 5%;
+}
+
+div.skillsTitle h3 {
+    font-size: 5rem;
+    text-decoration: underline;
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+}
+
+div.mySkillsDiv {
+    width: 80%;
+    padding: 3% 2% 2% 5%;
+
+}
+
+div.mySkillsDiv img {
+    max-width: 80%;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ article info]*/
+article {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    background-color: #2d4059;
+    padding: 8% 0% 0% 12%;
+    overflow: hidden;
+}
+
+div.myInfo {
+    width: 30%;
+    height: 70%;
+    padding: 2.5% 3% 2% 3%;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    box-shadow: 20px 20px 60px #26364c, -20px -20px 60px #344a66;
+}
+
+div.myInfo p:nth-child(odd) {
+    margin-bottom: 4%;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: -3px 1px 1px #EA5455;
+}
+
+div.myInfo p:nth-child(even) {
+    margin-bottom: 7%;
+    color: #fff;
+}
+
+div.ausbildungContent {
+    width: 50%;
+    height: 70%;
+    border-left: 4px solid #fff;
+    padding-top: 2%;
+}
+
+div.ausbildungContent p {
+    background-color: #fff;
+    position: relative;
+    width: 70%;
+    padding: 2% 3% 3% 3%;
+    margin-bottom: 10%;
+    border: 3px solid #cccccc;
+    margin-left: 29px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+div.ausbildungContent p::before {
+    content: '';
+    position: absolute;
+    top: 7%;
+    left: -45px;
+    width: 12px;
+    height: 12px;
+    background-color: #2C3E50;
+    border: 4px solid #cccccc;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+div.ausbildungContent p::after {
+    content: '';
+    position: absolute;
+    top: 7%;
+    left: -25px;
+    border: 11px solid #cccccc;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+div.ausbildungContent p strong {
+    border-bottom: 2px solid #ea5455;
+}
+
+div.ausbildungContent p span {
+    display: block;
+    margin-top: 10px;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[div myHint]*/
+
+div.myHint {
+    width: 100%;
+    height: 20vh;
+    background-color: #2d4059;
+    text-align: center;
+}
+
+div.myHint img {
+    width: 12%;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[heartSection]*/
+
+section.heartSection {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section.heartSection div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.heartSection h1 {
+    width: 60%;
+    font-size: 3em;
+    font-weight: bold;
+    color: #2d4059;
+    padding-left: 15px;
+}
+
+section.heartSection h1::first-line {
+    line-height: 1.5em;
+    color: #ea5455;
+}
+
+section.heartSection h1::first-letter {
+    font-size: 2em;
+}
+
+section.heartSection a.heart-beat {
+    background-color: #ea5455;
+    color: #FFF;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    padding-top: 30px;
+    cursor: default;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(0.95);
+    }
+
+    50% {
+        transform: scale(.9);
+    }
+
+    75% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+section.heartSection a.heart-beat i {
+    animation: heartbeat .7s infinite ease-in-out;
+}
+
+/*------------------------------------------------------------------
+[ Unicorn Part ]*/
+section.heartSection div.unicorn {
+    width: 40%;
+    align-self: flex-end;
+}
+
+section.heartSection div.unicorn img {
+    width: 20%;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+section.heartSection div.unicorn p {
+    position: relative;
+    width: 60%;
+    background-color: #decdc3;
+    color: #2d4059;
+    padding: 3%;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    visibility: hidden;
+    transition: visibility 1s ease;
+    -webkit-transition: visibility 1s ease;
+    -moz-transition: visibility 1s ease;
+    -ms-transition: visibility 1s ease;
+    -o-transition: visibility 1s ease;
+}
+
+section.heartSection div.unicorn p::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    right: -17px;
+    border: 10px solid #decdc3;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+section.heartSection div.unicorn p.showUnicornHint {
+    visibility: visible;
+}
+
+section.heartSection div.unicorn img.shakeEffect {
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+/*//////////////////////////////////////////////////////////////////
+[footer wave]*/
+
+div.custom-shape-divider-bottom-1601806601 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+div.custom-shape-divider-bottom-1601806601 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 38px;
+}
+
+div.custom-shape-divider-bottom-1601806601 .shape-fill {
+    fill: #2D4059;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[responsive]*/
+
+@media (min-width: 1800px) {
+    div.mySkillsDiv {
+        width: 70%;
+        padding-top: 1%;
+    }
+
+    div.myInfo p:nth-child(odd) {
+        margin-bottom: 1%;
+    }
+
+    div.myInfo p:nth-child(even) {
+        margin-bottom: 5%;
+    }
+
+    div.myInfo {
+        height: 75%;
+        padding: 2% 3% 2% 3%;
+    }
+
+    div.ausbildungContent {
+        height: 75%;
+        padding-top: 1%;
+    }
+
+    div.ausbildungContent p {
+        margin-bottom: 4%;
+    }
+
+    div.myHint img {
+        width: 250px;
+    }
+}
+
+@media (min-width: 2671px) {
+    div.mySkillsDiv {
+        width: 80%;
+        padding-top: 2%;
+    }
+
+    div.myInfo {
+        height: 85%;
+    }
+
+    div.ausbildungContent p {
+        padding: 1%;
+    }
+
+    div.myHint img {
+        width: 280px;
+    }
+}
+
+@media (max-width: 1500px) {
+    section.home pre {
+        font-size: 10rem;
+    }
+
+    div.myHint img {
+        width: 20%;
+    }
+}
+
+@media (max-width: 1259px) {
+    section.home pre {
+        font-size: 6rem;
+    }
+
+    section.mySkills {
+        height: 45vh;
+    }
+
+    article {
+        padding: 10% 0% 0% 7%;
+    }
+
+    div.ausbildungContent {
+        height: 60%;
+        padding-top: 6%;
+    }
+
+    div.ausbildungContent p {
+        margin-bottom: 11%;
+    }
+
+    div.myInfo {
+        width: 36%;
+        height: 55%;
+    }
+
+    div.myHint img {
+        width: 25%;
+    }
+
+    section.heartSection h1 {
+        font-size: 2.1rem;
+    }
+
+    section.heartSection div.unicorn img {
+        width: 30%;
+    }
+}
+
+@media (max-width: 790px) {
+    section.home pre {
+        font-size: 4rem;
+    }
+
+    section.mySkills {
+        height: 24vh;
+    }
+
+    div.skillsTitle h3 {
+        font-size: 3rem;
+    }
+
+    div.myInfo p:nth-child(even) {
+        margin-bottom: 14%;
+        word-break: break-word;
+    }
+
+    div.myInfo {
+        padding: 5.5% 3% 2% 4%;
+    }
+
+    div.myHint img {
+        width: 32%;
+    }
+
+    section.heartSection h1 {
+        font-size: 1.8rem;
+    }
+
+    section.heartSection div.unicorn img {
+        width: 50%;
+    }
+
+    section.heartSection div.unicorn p {
+        padding: 4%;
+    }
+
+    section.heartSection div.unicorn {
+        width: 47%;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 553px) {
+    section.home ul {
+        width: 62%;
+    }
+
+    section.home ul li a {
+        font-size: 1rem;
+    }
+
+    section.home pre {
+        font-size: 2.5rem;
+    }
+
+    div.ausbildungContent {
+        height: 50%;
+        width: 90%;
+        padding-top: 3%;
+        margin: 10% 5% 2%;
+    }
+
+    div.myHint {
+        width: 100%;
+        height: 20vh;
+        background-color: #2d4059;
+        text-align: center;
+        margin-top: -1%;
+        padding-top: 10%;
+    }
+
+    div.myHint img {
+        width: 40%;
+    }
+
+    section.heartSection h1 {
+        font-size: 1.2rem;
+        padding-left: 0px;
+    }
+
+    article {
+        flex-direction: column;
+        padding: 17% 0% 0% 7%;
+    }
+
+    div.myInfo {
+        width: 88%;
+        height: 50%;
+        padding: 6% 3% 2% 6%;
+    }
+
+    div.myInfo p:nth-child(odd) {
+        margin-bottom: 1%;
+    }
+
+    div.myInfo p:nth-child(even) {
+        margin-bottom: 5%;
+        word-break: break-word;
+    }
+
+    section.heartSection div.unicorn img {
+        width: 29%;
+    }
+
+    section.heartSection div.unicorn {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 481px) {
+    section.home header img {
+        margin-left: 0%;
+    }
+
+    section.home ul {
+        width: 42%;
+    }
+
+    section.home header img {
+        margin-top: 100px;
+    }
+
+    section.mySkills {
+        height: 20vh;
+    }
+
+    div.skillsTitle h3 {
+        font-size: 2.2rem;
+    }
+
+    article {
+        flex-direction: column;
+        padding: 17% 0% 0% 7%;
+        height: 120vh;
+    }
+
+    div.myInfo {
+        width: 85%;
+        height: 60%;
+        padding: 5% 3% 2% 6%;
+        margin: 2% 0% 0% 2%;
+    }
+
+    div.myInfo p:nth-child(odd) {
+        margin-bottom: 0%;
+    }
+
+    div.ausbildungContent {
+        height: 51%;
+        width: 90%;
+        padding-top: 2%;
+    }
+
+    div.ausbildungContent p {
+        margin-bottom: 11%;
+        font-size: 0.8rem;
+    }
+
+    div.myHint img {
+        margin-top: 14%;
+        width: 36%;
+    }
+
+
+    section.heartSection {
+        flex-direction: column;
+    }
+
+    section.heartSection div {
+        width: 100%;
+    }
+
+    section.heartSection h1 {
+        padding-top: 50px;
+    }
+
+    section.heartSection div.unicorn p {
+        width: 42%;
+    }
+
+}
+
+@media (max-width: 280px) {
+    section.home pre {
+        font-size: 2rem;
+    }
+}
